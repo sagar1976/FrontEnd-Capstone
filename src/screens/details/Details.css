@@ -1,0 +1,217 @@
+/***css for Details component**/
+.details-container{
+    width:100%;
+}
+
+.restaurant-info {
+    background-color: #E8E8E8;
+    width: 100%;
+}
+
+.restaurant-details{
+    margin:0;
+    padding: 10px;
+    display:inline-block;
+    
+}
+
+.restaurant-image {
+    margin:10px;
+    display:inline-block;
+    float:left;
+}
+
+.restaurant-title {
+    margin:0px;
+    font-size: 150%;
+    font-weight:bold;
+    text-align: center;
+}
+
+.restaurant-locality{
+    font-size: 120%;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.restaurant-categories{
+    text-align: center;
+}
+
+.cat-item:after{
+    content: ", ";
+}
+
+.cat-item:last-child:after{
+    content: "";
+}
+
+.rating-cost{
+    width:100%;
+}
+
+.restaurant-rating{
+    float:left;
+    width: 40%;
+    text-align: center;
+}
+
+.restaurant-avg-cost{
+    float:right;
+    width: 40%;
+    text-align: center;
+}
+
+.sub-text{
+    color:grey;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.main-container {
+    width: 100%;
+}
+
+.menu-container {
+    display:block;
+    width: 100%;
+}
+
+.cat-container {
+    padding: 5%;
+}
+
+.cat-heading {
+    margin:0;
+    color: grey; 
+    font-size: 110%;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+.divider {
+    margin:0px;
+    padding:0px;
+}
+
+.menu-items {
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+.VEG{
+    color:green;
+}
+
+.NON_VEG{
+    color:red;
+}
+
+.menu-item-name {
+    margin:0;
+    padding:0;
+    text-transform: capitalize;
+}
+    
+.cart-container {
+    display:block;
+    width: 100%;
+}
+
+.cart-card-container {
+    padding: 5%;
+}
+
+.card-card-heading {
+    
+}
+
+.cart-table{
+    padding: 0 3% 0 4%;
+}
+
+.cart-heading {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.menu-item-name{
+    color: grey;
+    text-transform: capitalize;
+}
+
+.cart-item-qty {
+    text-align: center;
+}
+
+.menu-item-amount{
+    color:grey;    
+    text-align: right;
+}
+
+.total-amount-heading {
+    margin:5%;
+    font-weight: bold;
+}
+
+.total-amount {
+    margin: 5%;
+    font-weight:bold;
+    text-align: right;
+}
+
+.cart-button {
+    margin: 5%;
+    
+}
+.checkout-button {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .restaurant-title {
+        text-align: left;
+    }
+    .restaurant-title {
+        text-align: left;
+    }
+    .restaurant-locality{
+        text-align: left;
+    }
+    
+    .restaurant-categories{
+        text-align: left;
+    }
+    
+    .restaurant-rating{
+        text-align: left;
+    }
+    .restaurant-avg-cost{
+        text-align: left;
+    }
+
+    .main-container {
+        overflow:hidden;
+    }
+    .menu-container {
+        width: 50%;
+        float: left;
+    }
+
+    .cat-container {
+        overflow: hidden;
+    }
+    
+    .cart-container {
+        display:inline-block;
+        width: 50%;
+    }
+
+    .cart-card-container {
+        padding: 5%;
+    }
+
+}
