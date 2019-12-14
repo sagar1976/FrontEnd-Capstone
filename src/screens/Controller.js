@@ -5,8 +5,8 @@ import Checkout from '../screens/checkout/Checkout';
 import Profile from '../screens/profile/Profile';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-class Controller extends Component {
-    baseUrl = "http://localhost:8080/api";
+class Controller extends Component {//controller implementing routing logic to navigate between pages
+    baseUrl = "http://localhost:8080/api";//baseURL sent as props to navigate between pages
     render() {
         return (
             <Router>
