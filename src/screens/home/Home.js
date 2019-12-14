@@ -50,7 +50,7 @@ class Home extends Component {
     let xhr = new XMLHttpRequest();
     let that = this;
 
-    console.log("baseurl : " + this.props.baseUrl + resourcePath);
+    //console.log("baseurl : " + this.props.baseUrl + resourcePath);
     xhr.addEventListener("readystatechange", function() {
       if (this.readyState === 4) {
         that.setState({
