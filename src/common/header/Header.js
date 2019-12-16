@@ -188,7 +188,6 @@ class Header extends Component {
       "&password=" +
       this.state.loginPassword;
     xhrLogin.open("POST", this.props.baseUrl + loginPath + "?" + data);
-    //xhrLogin.setRequestHeader("Authorization", "Basic " + window.btoa(this.state.username + ":" + this.state.loginPassword));
     xhrLogin.setRequestHeader("Content-Type", "application/json");
     xhrLogin.setRequestHeader("Cache-Control", "no-cache");
     xhrLogin.send(dataLogin);
@@ -202,8 +201,7 @@ class Header extends Component {
     this.setState({ loginPassword: e.target.value });
   };
 
-  /**Sign up page validation using regex
-   * */
+  /*Regex is being used for Sign up page validation*/
   validateSignUp() {
     const emailRegx = /^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i;
     const passwordRegx = /^(?=.*[0-9]+.*)(?=.*[a-zA-Z]+.*)(?=.*[#@$%&*!^]+.*)[a-zA-Z0-9#@$&*!]{4,}$/;
@@ -276,8 +274,7 @@ class Header extends Component {
     return this.state.formValid;
   }
 
-  /*** Backend integration
-   */
+  /* Backend integration is being used in below code*/
   signUp(dataSignup) {
     let resourcePath = "customer/signup";
     let xhrSignup = new XMLHttpRequest();
@@ -362,9 +359,7 @@ class Header extends Component {
       pathname: "/profile"
     });
   };
-  /** Method to Logout the user from the current session & to go to home page
-   *
-   */
+  /*Logic to Logout the user from the current session & to go to home page*/
   logoutClickHandler = () => {
     sessionStorage.removeItem("uuid");
     sessionStorage.removeItem("loggedInUserName");
@@ -441,7 +436,7 @@ class Header extends Component {
           </Button>
         </div>
         <div>
-          {/* modal for login and sign up */}
+          {/*login and sign up modal logic*/}
           <Modal
             ariaHideApp={false}
             isOpen={this.state.modalIsOpen}
@@ -457,7 +452,7 @@ class Header extends Component {
               <Tab label="LOGIN" />
               <Tab label="SIGNUP" />
             </Tabs>
-            {/*signin page detail*/}
+            {/*signin page detail page logic*/}
             {this.state.value === 0 && (
               <TabContainer>
                 <FormControl required id="form-control">
@@ -513,7 +508,7 @@ class Header extends Component {
                 </Button>
               </TabContainer>
             )}
-            {/*Signup  page ****/}
+            {/*Signup  page logic*/}
             {this.state.value === 1 && (
               <TabContainer>
                 <FormControl required id="form-control">
