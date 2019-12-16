@@ -91,7 +91,7 @@ class Details extends Component {
         this.setState({snackBarMessage: "Item added to cart!"})
     }
 
-    /*The below code snippet calculates the Total Cart Amount*/
+    /*Total Cart Amount is calculated in below code*/
     totalAmountCalc (itemValue) {
         this.setState({totalCartValue: this.state.totalCartValue + itemValue})
     }
@@ -116,12 +116,12 @@ class Details extends Component {
         });
     }
 
-    /* Below snippet closes the Snack-bar */
+    /* Snack-bar is closed using below code */
     handleClose = event => {
         this.setState({snackBarOpen: false});
     }
 
-    /* The below code snippet addresses the Checkout functionality*/
+    /* Checkout functionality code is depicted below*/
     checkoutButtonClickHandler = event => {
         if (this.state.cartCounter === 0 && this.state.cartItems.length === 0) {
             this.setState({snackBarOpen: true});
@@ -147,7 +147,6 @@ class Details extends Component {
         const restaurant = this.state.restaurants;
         const address = this.state.address;
         const categories = this.state.categories;
-        //const items = this.state.categories.items;
         const cartItems = this.state.cartItems;
         const totalCartValue = this.state.totalCartValue;
         const {classes} = this.props;
