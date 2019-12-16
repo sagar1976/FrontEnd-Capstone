@@ -52,7 +52,7 @@ const styles = theme => ({
     },
     media: {
         height: 0,
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '56.25%',
     },
     title: {
         fontWeight: 'strong',
@@ -151,9 +151,9 @@ class Checkout extends Component {
             this.props.history.push('/');
         }
         else {
-            let resourcePath = "/address/customer"; //Resource path for fetching address details of the customer
-            let resourcePath1 = "/payment/";        //Resource path for fetching payment methods details
-            let resourcePath2 = "/states/";         //Resource Path for fetching all state list 
+            let resourcePath = "/address/customer"; //fetching address details of the customer with mentioned resource path
+            let resourcePath1 = "/payment/";        //fetching payment methods details with mentioned resource path
+            let resourcePath2 = "/states/";         //fetching all state list with mentioned resource path
     
             let xhr = new XMLHttpRequest();
             let xhr1 = new XMLHttpRequest();
@@ -161,7 +161,7 @@ class Checkout extends Component {
             
            
             let that = this;
-            //Logic to fetch addresses for a customer
+            //fetch addresses for a customer
             xhr.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     that.setState({
@@ -174,7 +174,7 @@ class Checkout extends Component {
             xhr.setRequestHeader("authorization","Bearer " + sessionStorage.getItem("access-token"));
             xhr.send();
 
-            //Logic to fetch the avaiable payment methods 
+            //fetch the avaiable payment methods 
             xhr1.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     that.setState({
@@ -187,7 +187,7 @@ class Checkout extends Component {
             xhr1.setRequestHeader("authorization", "Bearer " + sessionStorage.getItem("access-token"));
             xhr1.send();
 
-            //Logic to fetch the states
+            //fetch the states
             xhr2.addEventListener("readystatechange", function () {
                 if (this.readyState === 4) {
                     that.setState({
@@ -206,7 +206,7 @@ class Checkout extends Component {
 
     }
 
-     /* Backend integration to save a new address*/
+     /* Saving a new address using backward integration*/
   saveAddress(datasaveAddress) {
 
     let resourcePath = "/address";
